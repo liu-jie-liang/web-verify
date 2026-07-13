@@ -4,6 +4,18 @@
 
 专为中国 IT/AI 就业市场设计。5 次独立冷启动测试通过。
 
+## 调用链中的位置
+
+作为基础层 skill，被其他 skill 调用用于市场数据搜验：
+
+```
+web-verify（基础层：搜索 + 信源过滤 + 对抗验证）
+    │
+    ├──→ career-advisor（职业方向诊断，搜索市场数据）
+    ├──→ career-navigator（求职全链条，搜索市场数据 + HR 分析）
+    └──→ study-planner（学习路径设计，搜索最新技术/考试信息）
+```
+
 ## 它解决什么问题
 
 你问 Agent "学 LangChain 能找到工作吗？"或"AI 岗位薪资多少？"，普通 Agent 凭训练数据给你观点。加载 web-verify 后，Agent 会：
